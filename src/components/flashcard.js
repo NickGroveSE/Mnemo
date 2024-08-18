@@ -16,7 +16,7 @@ const Card = styled(Paper)(({ theme }) => ({
     padding: '20px'
   }));
 
-export default function Flashcard() {
+export default function Flashcard( props ) {
 
     const [flipped, setFlipped] = useState(false)
 
@@ -25,13 +25,13 @@ export default function Flashcard() {
             className="flip-card"
             width={'410px'} 
             height={'260px'} 
+            margin={'100px 175px'}
             backgroundColor={'transparent'}
             borderRadius={'10px'}
-            
         >
             <Box className={flipped ? "flip-card-inner flipped" : "flip-card-inner"} onClick={() => setFlipped(!flipped)}>
-                <Card className="flip-card-front">How do you center a div using CSS?</Card>
-                <Card className="flip-card-back">display: flex;<br/>justify-content: center;<br/>align-items: center;</Card>
+                <Card className="flip-card-front">{ props.card.question }</Card>
+                <Card className="flip-card-back">{ props.card.answer }</Card>
             </Box>
             
         </Box>
