@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { firestore } from '@/firebase';
+import { firestore } from '../firebase';
 import { Container, Box, Typography, AppBar, Toolbar} from '@mui/material'
 
 export default function Home() {
