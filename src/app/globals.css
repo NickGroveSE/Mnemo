@@ -36,13 +36,17 @@ nav {
 }
 
 .nav-link {
-  font-size: 30px;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 75px;
   float: right;
-  margin-left: 20px;
+  margin-left: 30px;
+
 }
 
 .flip-card {
   perspective: 1000px;
+  cursor: pointer;
 }
 
 .flip-card-inner {
@@ -57,6 +61,7 @@ nav {
 
 .flipped {
   transform: rotateY(180deg);
+  left: 40px;
 }
 
 .flip-card-front, .flip-card-back {
@@ -78,12 +83,17 @@ nav {
 .next-button {
   position: absolute;
   width: 100px;
-  height: 300px;
+  height: 100px;
   z-index: 1;
-  top: 100px;
+  top: 200px;
   transition: 0.5s;
   border-radius: 5px;
   border: 1px solid var(--palette-sea-salt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
 }
 
 .next-button:hover {

@@ -64,12 +64,12 @@ export default function Home() {
         display: 'block'
       }}>
         <img id="nav-logo" src="./mnemo-logo-dark-mode.svg"/>
-        {/* <a className="nav-link">
-          Sign In
+        <a className="nav-link">
+          Sign Up
         </a>
         <a className="nav-link">
           Log In
-        </a> */}
+        </a>
       </nav>
 
       <Box sx={{
@@ -80,33 +80,27 @@ export default function Home() {
         width: '100%',
         height: 'calc(100vh - 160px)',
       }}>
-        <Box 
+        <Box
+          width={'80vw'}
+          fontSize={'40px'}
+          textAlign={'center'}
+          fontWeight={'bold'}
+        >
+          Mnemo is your seemless and sleek solution to acing your next exam
+        </Box>
+        {/* <Box 
           width={'800px'}
           height={'500px'}
           position={'relative'}
         >
           <Flashcard card={cards[position]}/>
-          <Box className="next-button" id="left-button" onClick={function(){if(position==0){setPosition(0)}else{setPosition(position-1)}}}
-            sx={{
-              display: 'flex', 
-              alignItems: 'center', 
-              justifyContent: 'center',
-              textAlign: 'center'
-            }}
-          >
+          <Box className="next-button" id="left-button" onClick={function(){if(position==0){setPosition(0)}else{setPosition(position-1)}}}>
             Previous
           </Box>
-          <Box className="next-button" id="right-button" onClick={function(){if(position==cards.length-1){setPosition(cards.length-1)}else{setPosition(position+1)}}}
-            sx={{
-              display: 'flex', 
-              alignItems: 'center', 
-              justifyContent: 'center',
-              textAlign: 'center'
-            }}
-          >
+          <Box className="next-button" id="right-button" onClick={function(){if(position==cards.length-1){setPosition(cards.length-1)}else{setPosition(position+1)}}}>
             Next
           </Box>
-        </Box>
+        </Box> */}
       </Box>
 
     </Box>
