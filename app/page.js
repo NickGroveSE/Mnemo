@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import { firestore } from '@/firebase';
+import { firestore } from '../firebase';
 import { Container, Box, Typography, AppBar, Toolbar} from '@mui/material'
 import Flashcard from "../components/flashcard.js"
 import { useState } from 'react'
