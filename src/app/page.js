@@ -63,7 +63,7 @@ export default function Home() {
         padding: "30px 100px",
         display: 'block'
       }}>
-        <img id="nav-logo" src="./mnemo-logo-dark-mode.svg"/>
+        <img id="nav-logo" src="./mnemo-name-logo-dark-mode.svg"/>
         <a className="nav-link">
           Sign Up
         </a>
@@ -86,7 +86,7 @@ export default function Home() {
           textAlign={'center'}
           fontWeight={'bold'}
         >
-          Mnemo is your seemless and sleek solution to acing your next exam
+          Mnemo is your seamless and sleek solution to acing your next exam
         </Box>
         {/* <Box 
           width={'800px'}
