@@ -1,5 +1,18 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs'
+import './globals.css'
+// export default function RootLayout({
+//   children,
+// }: {
+//   children: React.ReactNode
+// }) {
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,9 +22,32 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+  const userButtonAppearance = {
+    elements: {
+      userButtonAvatarBox: "w-75 h-75", // Custom width and height
+    },
+  };
+
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          
+          <nav sx={{
+            width: "calc(100% - 200px)",
+            height: "75px",
+            backgroundColor: "var(--palette-charcoal-blue)",
+            padding: "30px 100px",
+            display: 'block'
+          }}>
+            <img id="nav-logo" src="./mnemo-name-logo-dark-mode.svg"/>
+            <SignedOut><SignInButton className="nav-link" /></SignedOut>
+            <SignedIn><UserButton appearance={userButtonAppearance}/></SignedIn>
+          </nav>
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

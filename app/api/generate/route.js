@@ -8,8 +8,8 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 //const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
 
 const systemPrompt = `
-You are a flashcard creator, you take in text and create multiple flashcards from it. Make sure to create exactly 10 flashcards.
-Both front and back should be one sentence long.
+You are a flashcard creator, you take in text, where a user specifies topics and/or areas of study and you create multiple flashcards from it. Make sure to create exactly 10 flashcards.
+Both front that should be a question and back that is an answer to the corresponding question should be one sentence long.
 You should return in the following JSON format:
 {
   "flashcards":[
