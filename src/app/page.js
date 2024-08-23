@@ -89,18 +89,20 @@ export default function Home() {
 
   return (
     <Box>
-      <nav
-        sx={{
-          width: "calc(100% - 200px)",
-          height: "75px",
-          backgroundColor: "var(--palette-charcoal-blue)",
-          padding: "30px 100px",
-          display: "block",
-        }}
-      >
-        <img id="nav-logo" src="./mnemo-logo-dark-mode.svg" />
-        <a className="nav-link">Sign Up</a>
-        <a className="nav-link">Log In</a>
+      <nav sx={{
+        width: "calc(100% - 200px)",
+        height: "75px",
+        backgroundColor: "var(--palette-charcoal-blue)",
+        padding: "30px 100px",
+        display: 'block'
+      }}>
+        <img id="nav-logo" src="./mnemo-logo-dark-mode.svg"/>
+        <a className="nav-link">
+          Sign Up
+        </a>
+        <a className="nav-link">
+          Log In
+        </a>
       </nav>
       <Box
         sx={{
@@ -118,7 +120,7 @@ export default function Home() {
           textAlign={"center"}
           fontWeight={"bold"}
         >
-          Mnemo is your seemless and sleek solution to acing your next exam
+          Mnemo is your seamless and sleek solution to acing your next exam
         </Box>
         {
           <Box width={"800px"} height={"500px"} position={"relative"}>
@@ -202,3 +204,4 @@ export default function Home() {
     </Box>
   );
 }
+

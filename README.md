@@ -1,1 +1,1 @@
-![Logo](https://github.com/NickGroveSE/Mnemo/blob/main/public/mnemo-logo.svg)
+![Logo](https://github.com/NickGroveSE/Mnemo/blob/main/public/mnemo-name-logo-dark-mode.svg)
