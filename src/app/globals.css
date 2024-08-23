@@ -105,7 +105,6 @@ nav {
   top: 100px;
   transition: 0.5s;
   border-radius: 5px;
-  border: 1px solid var(--palette-sea-salt);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,8 +113,6 @@ nav {
 }
 
 .next-button:hover {
-  border-color: var(--palette-sky-blue);
-  filter: drop-shadow(0 0 4px var(--palette-sea-salt));
   color: var(--palette-sky-blue);
 }
 
@@ -125,10 +122,6 @@ nav {
 
 #right-button {
   right: 0;
-}
-
-#text-field {
-  color: var(--palette-sea-salt);
 }
 
 ::placeholder {

@@ -21,6 +21,7 @@ export default function Generate() {
   const [position, setPosition] = useState(0)
 
   const handleSubmit = async () => {
+    
     // We'll implement the API call here
     if (!text.trim()) {
         alert('Please enter some text to generate flashcards.')
@@ -47,22 +48,21 @@ export default function Generate() {
 
   return (
     <Container maxWidth="md"
-    height={"max-content"}
+      height={"max-content"}
     >
-      <Box sx={{ my: 4 }}>
+      <Box sx={{ my: 4 }} paddingTop={flashcards.length > 0 ? "100px" : "0"}>
         <Typography variant="h4" component="h1" gutterBottom>
           Generate Flashcards
         </Typography>
         <TextField
-          id="text-field"
           value={text}
           onChange={(e) => setText(e.target.value)}
           label="Enter text"
           fullWidth
           multiline
           rows={4}
-          variant="outlined"
-          sx={{ mb: 2 }}
+          variant="filled"
+          sx={{ mb: 2, "&" : {backgroundColor: "var(--palette-platinum)" }}}
         />
         <Button
           variant="contained"

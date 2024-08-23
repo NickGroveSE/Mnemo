@@ -8,11 +8,6 @@ import {
   UserButton
 } from '@clerk/nextjs'
 import './globals.css'
-// export default function RootLayout({
-//   children,
-// }: {
-//   children: React.ReactNode
-// }) {
 
 const inter = Inter({ subsets: ["latin"] });
 

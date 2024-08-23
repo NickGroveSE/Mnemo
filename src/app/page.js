@@ -1,6 +1,6 @@
 'use client'
 
-import { firestore } from '../firebase';
+
 import { Box } from '@mui/material'
 import Generate from "./generate/page.js"
 import { useState, useEffect } from 'react'
@@ -28,17 +28,9 @@ export default function Home() {
             fontWeight: 'light',
             textAlign: 'center',
             width: '80%',
-            letterSpacing: '-5px'
+            letterSpacing: '-3px'
           }}>
             Mnemo is your seamless and sleek solution to acing your next exam
-          </Box>
-          <Box sx={{
-            fontSize: '20px',
-            textAlign: 'center',
-            width: '50%',
-            marginTop: '30px'
-          }}>
-            Unlock The Power of Mnemo, use Gemini AI to quickly create customized sets of flashcards.
           </Box>
           
         </Box>
@@ -50,7 +42,7 @@ export default function Home() {
           alignItems: 'center', 
           justifyContent: 'center',
           width: '100%',
-          height: 'max-content'
+          height: 'calc(100vh - 160px)'
         }}>
           <Generate/>
         </Box>
