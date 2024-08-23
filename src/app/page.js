@@ -12,7 +12,7 @@ import {
   Grid,
   Button,
 } from "@mui/material";
-import Flashcard from "../components/flashcard.js";
+import Flashcard from "./components/flashcard.js";
 import { useState } from "react";
 import getStripe from "./utils/getStripe";
 
@@ -154,52 +154,60 @@ export default function Home() {
           </Box>
         }
       </Box>
-      <Box sx={{ my: 6 }}>
-        <Typography variant="h4" gutterBottom>
-          Pricing
-        </Typography>
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={4}>
-            <Box
-              sx={{
-                p: 3,
-                border: "1px solid",
-                borderColor: "grey.300",
-                borderRadius: 2,
-              }}
-            >
-              <Typography variant="h5">Basic</Typography>
-              <Typography variant="h6">$5 / Month</Typography>
-              <Typography>Access to flashcard features</Typography>
-              <Button variant="contained" color="primary">
-                Choose Basic
-              </Button>
-            </Box>
-          </Grid>
-        </Grid>
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={4}>
-            <Box
-              sx={{
-                p: 3,
-                border: "1px solid",
-                borderColor: "grey.300",
-                borderRadius: 2,
-              }}
-            >
-              <Typography variant="h5">Pro</Typography>
-              <Typography variant="h6">$10 / Month</Typography>
-              <Typography>Unlimited flashcards and storage</Typography>
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={handleSubmit}
+      <Box sx={{          
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        width: '100vw'
+      }}>
+        <Box sx={{ my: 6}}>
+          <Typography variant="h4" gutterBottom>
+            Pricing
+          </Typography>
+          <Grid container>
+            <Grid item xs={12}>
+              <Box
+                sx={{
+                  p: 3,
+                  border: "1px solid",
+                  borderColor: "grey.300",
+                  borderRadius: 2,
+                }}
               >
-                Choose Pro
-              </Button>
-            </Box>
+                <Typography variant="h5">Basic</Typography>
+                <Typography variant="h6">$5 / Month</Typography>
+                <Typography>Access to flashcard features</Typography>
+                <Button variant="contained" color="primary">
+                  Choose Basic
+                </Button>
+              </Box>
+            </Grid>
           </Grid>
-        </Grid>
+          <Grid container>
+            <Grid item xs={12}>
+              <Box
+                sx={{
+                  p: 3,
+                  border: "1px solid",
+                  borderColor: "grey.300",
+                  borderRadius: 2,
+                }}
+              >
+                <Typography variant="h5">Pro</Typography>
+                <Typography variant="h6">$10 / Month</Typography>
+                <Typography>Unlimited flashcards and storage</Typography>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={handleSubmit}
+                >
+                  Choose Pro
+                </Button>
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
       </Box>
     </Box>
   );
