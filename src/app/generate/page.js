@@ -13,12 +13,15 @@ import {
   Card,           
   CardContent,
 } from '@mui/material'
+import Flashcard from '../components/flashcard.js'
 
 export default function Generate() {
   const [text, setText] = useState('')
   const [flashcards, setFlashcards] = useState([])
+  const [position, setPosition] = useState(0)
 
   const handleSubmit = async () => {
+    
     // We'll implement the API call here
     if (!text.trim()) {
         alert('Please enter some text to generate flashcards.')
@@ -44,8 +47,10 @@ export default function Generate() {
   }
 
   return (
-    <Container maxWidth="md">
-      <Box sx={{ my: 4 }}>
+    <Container maxWidth="md"
+      height={"max-content"}
+    >
+      <Box sx={{ my: 4 }} paddingTop={flashcards.length > 0 ? "100px" : "0"}>
         <Typography variant="h4" component="h1" gutterBottom>
           Generate Flashcards
         </Typography>
@@ -56,12 +61,11 @@ export default function Generate() {
           fullWidth
           multiline
           rows={4}
-          variant="outlined"
-          sx={{ mb: 2 }}
+          variant="filled"
+          sx={{ mb: 2, "&" : {backgroundColor: "var(--palette-platinum)" }}}
         />
         <Button
           variant="contained"
-          color="primary"
           onClick={handleSubmit}
           fullWidth
         >
@@ -72,23 +76,20 @@ export default function Generate() {
       {/* We'll add flashcard display here */}
       {flashcards.length > 0 && (
         <Box sx={{ mt: 4 }}>
-            <Typography variant="h5" component="h2" gutterBottom>
-            Generated Flashcards
-            </Typography>
-            <Grid container spacing={2}>
-            {flashcards.map((flashcard, index) => (
-                <Grid item xs={12} sm={6} md={4} key={index}>
-                <Card>
-                    <CardContent>
-                    <Typography variant="h6">Front:</Typography>
-                    <Typography>{flashcard.front}</Typography>
-                    <Typography variant="h6" sx={{ mt: 2 }}>Back:</Typography>
-                    <Typography>{flashcard.back}</Typography>
-                    </CardContent>
-                </Card>
-                </Grid>
-            ))}
-            </Grid>
+            <Box 
+              width={'800px'}
+              height={'500px'}
+              position={'relative'}
+            >
+              <Flashcard card={flashcards[position]}/>
+              <Box className="next-button" id="left-button" onClick={function(){if(position==0){setPosition(0)}else{setPosition(position-1)}}}>
+                Previous
+              </Box>
+              <Box className="next-button" id="right-button" onClick={function(){if(position==flashcards.length-1){setPosition(flashcards.length-1)}else{setPosition(position+1)}}}>
+                Next
+              </Box>
+            </Box>
+
         </Box>
         )}
         

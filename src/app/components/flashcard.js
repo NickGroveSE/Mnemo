@@ -25,13 +25,13 @@ export default function Flashcard( props ) {
             className="flip-card"
             width={'410px'} 
             height={'260px'} 
-            margin={'100px 175px'}
+            margin={'25px 175px'}
             backgroundColor={'transparent'}
             borderRadius={'10px'}
         >
             <Box className={flipped ? "flip-card-inner flipped" : "flip-card-inner"} onClick={() => setFlipped(!flipped)}>
-                <Card className="flip-card-front">{ props.card.question }</Card>
-                <Card className="flip-card-back">{ props.card.answer }</Card>
+                <Card className="flip-card-front">{ props.card.front }</Card>
+                <Card className="flip-card-back">{ props.card.back }</Card>
             </Box>
             
         </Box>
